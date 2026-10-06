@@ -1,0 +1,4 @@
+20:16:22.689210 IP 10.0.2.15 > 8.8.8.8: ICMP echo request, id 41643, seq 42, length 64
+20:16:22.691649 IP 8.8.8.8 > 10.0.2.15: ICMP echo reply, id 41643, seq 42, length 64
+20:16:23.688142 IP 10.0.2.15 > 8.8.8.8: ICMP echo request, id 41643, seq 43, length 64
+20:16:23.690229 IP 8.8.8.8 > 10.0.2.15: ICMP echo reply, id 41643, seq 43, length 64

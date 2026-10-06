@@ -1,0 +1,53 @@
+20:14:57.854535 IP (tos 0xc0, ttl 64, id 53546, offset 0, flags [DF], proto UDP (17), length 293)
+    192.168.50.58.68 > 192.168.50.1.67: BOOTP/DHCP, Request from 08:00:27:12:74:74, length 265, xid 0xb88278c, secs 64, Flags [none]
+	  Client-IP 192.168.50.58
+	  Client-Ethernet-Address 08:00:27:12:74:74
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message (53), length 1: Release
+	    Client-ID (61), length 19: hardware-type 255, e2:34:3f:3e:00:02:00:00:ab:11:84:dc:81:1f:f4:55:58:55
+20:14:58.018843 IP (tos 0xc0, ttl 64, id 0, offset 0, flags [none], proto UDP (17), length 321)
+    0.0.0.0.68 > 255.255.255.255.67: BOOTP/DHCP, Request from 08:00:27:12:74:74, length 293, xid 0x100a0ea6, secs 1, Flags [none]
+	  Client-Ethernet-Address 08:00:27:12:74:74
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message (53), length 1: Discover
+	    Client-ID (61), length 19: hardware-type 255, e2:34:3f:3e:00:02:00:00:ab:11:84:dc:81:1f:f4:55:58:55
+	    Parameter-Request (55), length 12: 
+	      Subnet-Mask (1), Default-Gateway (3), Domain-Name-Server (6), Hostname (12)
+	      Domain-Name (15), MTU (26), Static-Route (33), NTP (42)
+	      URL (114), Unknown (120), Classless-Static-Route (121), Unknown (162)
+	    MSZ (57), length 2: 1472
+	    SLP-NA (80), length 0""
+	    Hostname (12), length 6: "ubuntu"
+20:14:58.021704 IP (tos 0xc0, ttl 64, id 53475, offset 0, flags [none], proto UDP (17), length 328)
+    192.168.50.1.67 > 192.168.50.58.68: BOOTP/DHCP, Reply, length 300, xid 0x100a0ea6, secs 1, Flags [none]
+	  Your-IP 192.168.50.58
+	  Server-IP 192.168.50.1
+	  Client-Ethernet-Address 08:00:27:12:74:74
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message (53), length 1: Offer
+	    Server-ID (54), length 4: 192.168.50.1
+	    Lease-Time (51), length 4: 43200
+	    RN (58), length 4: 21600
+	    RB (59), length 4: 37800
+	    Subnet-Mask (1), length 4: 255.255.255.0
+	    BR (28), length 4: 192.168.50.255
+	    Domain-Name-Server (6), length 4: 8.8.8.8
+	    Default-Gateway (3), length 4: 192.168.50.1
+20:14:58.026374 IP (tos 0xc0, ttl 64, id 0, offset 0, flags [none], proto UDP (17), length 331)
+    0.0.0.0.68 > 255.255.255.255.67: BOOTP/DHCP, Request from 08:00:27:12:74:74, length 303, xid 0x100a0ea6, secs 1, Flags [none]
+	  Client-Ethernet-Address 08:00:27:12:74:74
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message (53), length 1: Request
+	    Client-ID (61), length 19: hardware-type 255, e2:34:3f:3e:00:02:00:00:ab:11:84:dc:81:1f:f4:55:58:55
+	    Parameter-Request (55), length 12: 
+	      Subnet-Mask (1), Default-Gateway (3), Domain-Name-Server (6), Hostname (12)
+	      Domain-Name (15), MTU (26), Static-Route (33), NTP (42)
+	      URL (114), Unknown (120), Classless-Static-Route (121), Unknown (162)
+	    MSZ (57), length 2: 1472
+	    Server-ID (54), length 4: 192.168.50.1
+	    Requested-IP (50), length 4: 192.168.50.58
+	    Hostname (12), length 6: "ubuntu"
