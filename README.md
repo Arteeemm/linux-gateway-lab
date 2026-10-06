@@ -62,6 +62,8 @@ sudo LAN_IF=enp0s9 WAN_IF=enp0s3 ./setup.sh
 
 **Шлюз пингуется, 8.8.8.8 нет.** Проблема на самом шлюзе. Без `ip_forward` Linux не пересылает чужие пакеты; без `MASQUERADE` пакеты уходят наружу с частного адреса 192.168.50.x, и ответ не возвращается. Проверено: после удаления правила tcpdump на внешнем интерфейсе показывает source 192.168.50.x и отсутствие echo reply.
 
+**После перезагрузки сервера NAT пропал.** Правила iptables хранятся в памяти ядра и без сохранения теряются при ребуте; `iptables-save` после перезагрузки показал пустую таблицу nat. Решение: `iptables-persistent` и `netfilter-persistent save` (делается в `setup.sh`). То же с `ip_forward`: `sysctl -w` действует до перезагрузки, постоянная настройка — файл в `/etc/sysctl.d/`.
+
 **`tcpdump: can't parse filter expression: syntax error`.** Фильтр `port 67 port 68` некорректен, нужно `'port 67 or port 68'`.
 
 **В tcpdump только Request и ACK, без Discover.** У клиента уже есть аренда, и он сразу просит продлить свой адрес. Для полного DORA: остановить dnsmasq, удалить `/var/lib/misc/dnsmasq.leases`, запустить снова.
